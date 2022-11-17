@@ -1,0 +1,180 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginBottom="0.3dp"
+
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="850dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="spacer_first,btn_edit,spacer_button,btn_trash,tv_date,tv_weather,tv_type,tv_training_detail,tv_6f,tv_5f,tv_4f,tv_3f,tv_2f,tv_1f,tv_notes"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:flow_wrapMode="aligned"
+        app:flow_firstHorizontalBias="0"
+        app:flow_horizontalStyle="spread_inside"
+        android:orientation="horizontal"
+        android:paddingRight="16dp"
+        />
+
+    <View
+        android:id="@+id/spacer_first"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        />
+    <ImageButton
+        android:id="@+id/btn_edit"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_edit_pencil"
+        android:background="?selectableItemBackgroundBorderless"
+        android:elevation="14dp"
+        android:scaleType="fitCenter"
+        />
+
+    <View
+        android:id="@+id/spacer_button"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+
+        />
+
+
+    <ImageButton
+        android:id="@+id/btn_trash"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_trashcan"
+        android:background="?selectableItemBackgroundBorderless"
+        android:elevation="14dp"
+        android:scaleType="fitCenter"
+        app:tint="#c70000"
+        />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="2021-05-02"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_weather"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text=""
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="調教タイプ"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_training_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="調教内容"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_6f"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="0.0"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_5f"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="80.3"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_4f"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="80.3"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_3f"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="80.3"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_2f"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="80.3"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_1f"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="80.3"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_notes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="なし"
+
+        android:gravity="center"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

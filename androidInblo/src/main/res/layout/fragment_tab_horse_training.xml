@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorDarkBackground"
+    android:paddingTop="24dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    >
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_record_today"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:iconGravity="textStart"
+            app:icon="@drawable/ic_add_blue"
+            app:iconTint="@color/colorPrimary"
+
+            style="@style/InbloTabButton"
+            android:text="調教内容を記録する"
+            />
+
+
+    <com.colinjp.inblo.android.domain.util.NonScrollingScrollView
+        android:id="@+id/hor_scroll_labels"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_record_today"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:scrollbarSize="0dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_columns"
+        android:layout_width="850dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/shape_rounded_top_corners_7dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:constraint_referenced_ids="spacer_label,label_date,label_weather,label_type,label_distance,label_6F,label_5F,label_4F,label_3F,label_2F,label_1F,label_note"
+        app:flow_wrapMode="aligned"
+        app:flow_firstHorizontalBias="0"
+        app:flow_horizontalStyle="spread_inside"
+        android:orientation="horizontal"
+        android:paddingRight="16dp"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        />
+
+            <View
+                android:id="@+id/spacer_label"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+
+                />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/label_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/InbloButtonTextView"
+        android:text="日付"
+        app:icon="@drawable/ic_baseline_arrow_drop_down_15"
+        app:iconTint="@android:color/white"
+
+        />
+
+            <TextView
+                android:id="@+id/label_weather"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+
+                style="@style/InbloTableColumnLabel"
+                android:text="天気"
+                android:gravity="center"
+                />
+
+    <TextView
+        android:id="@+id/label_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableColumnLabel"
+        android:text="調教\nタイプ"
+        android:gravity="center"
+        />
+
+
+    <TextView
+        android:id="@+id/label_distance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableColumnLabel"
+        android:text="調教\n内容"
+        android:gravity="center"
+        />
+
+
+
+
+
+    <TextView
+        android:id="@+id/label_6F"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+
+        style="@style/InbloTableColumnLabel"
+        android:text="6F"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/label_5F"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        style="@style/InbloTableColumnLabel"
+        android:text="5F"
+        />
+
+    <TextView
+        android:id="@+id/label_4F"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        style="@style/InbloTableColumnLabel"
+        android:text="4F"
+        />
+
+    <TextView
+        android:id="@+id/label_3F"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        style="@style/InbloTableColumnLabel"
+        android:text="3F"
+        />
+
+    <TextView
+        android:id="@+id/label_2F"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        style="@style/InbloTableColumnLabel"
+        android:text="2F"
+        />
+
+    <TextView
+        android:id="@+id/label_1F"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        style="@style/InbloTableColumnLabel"
+        android:text="1F"
+        />
+
+            <TextView
+                android:id="@+id/label_note"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+
+                style="@style/InbloTableColumnLabel"
+                android:text="調教メモ"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.colinjp.inblo.android.domain.util.NonScrollingScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/hor_scroll_recycler"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/hor_scroll_labels"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                android:fillViewport="true"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_horse_trainings"
+                            android:layout_width="850dp"
+                            android:layout_height="match_parent"
+
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+
+                            app:layout_constraintVertical_bias="0"
+                            tools:listitem="@layout/item_horse_training"
+                            android:paddingBottom="40dp"
+                            android:clipToPadding="false"
+                            tools:itemCount="30"
+                            />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

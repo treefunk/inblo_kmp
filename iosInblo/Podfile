@@ -1,0 +1,13 @@
+target 'iosInblo' do
+  use_frameworks!
+  platform :ios, '14.1'
+  pod 'shared', :path => '../shared'
+  pod 'MaterialComponents/TextControls+OutlinedTextFields'
+  pod 'MaterialComponents/Tabs+TabBarView'
+  pod 'Alamofire', '~> 5.4'
+  pod 'JTAppleCalendar'
+  pod 'FSCalendar'
+  pod 'SwiftCoroutine'
+  pod 'SDWebImageSwiftUI'
+  pod 'KeyboardObserving'
+end

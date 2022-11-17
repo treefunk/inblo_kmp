@@ -1,0 +1,212 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginBottom="0.3dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@android:color/white"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    >
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="spacer_first,btn_edit,spacer_button,btn_trash,tv_date,tv_temp,tv_weight,tv_condition_group,tv_rider_name,tv_training_type,tv_training_amount,tv_5f,tv_4f,tv_3f,tv_notes,tv_attachments"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:flow_wrapMode="aligned"
+        app:flow_firstHorizontalBias="0"
+        app:flow_horizontalStyle="spread_inside"
+        android:orientation="horizontal"
+        />
+
+    <View
+        android:id="@+id/spacer_first"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        />
+    <ImageButton
+        android:id="@+id/btn_edit"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_edit_pencil"
+        android:background="?selectableItemBackgroundBorderless"
+        android:elevation="14dp"
+        android:scaleType="fitCenter"
+        />
+
+    <View
+        android:id="@+id/spacer_button"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+
+        />
+
+
+    <ImageButton
+        android:id="@+id/btn_trash"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_trashcan"
+        android:background="?selectableItemBackgroundBorderless"
+        android:elevation="14dp"
+        android:scaleType="fitCenter"
+        app:tint="#c70000"
+        />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="2021-05-02"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_temp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="37.6°C"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="67.80 kg"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_condition_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text=""
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_rider_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text=""
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_training_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text=""
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_training_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text=""
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_5f"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text=""
+        android:gravity="center"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tv_4f"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text=""
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_3f"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text=""
+        android:gravity="center"
+
+        />
+
+
+
+
+
+    <TextView
+        android:id="@+id/tv_notes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth="150dp"
+        style="@style/InbloTableValues"
+        android:text="なし"
+
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_attachments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="@style/InbloTableValues"
+        android:text="@string/view_files"
+        android:gravity="center"
+        android:visibility="invisible"
+        />
+
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_view_attached_files"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="ファイル"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:padding="0dp"-->
+<!--        />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

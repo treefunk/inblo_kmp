@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/colorPrimaryDark">
+
+    <View
+        android:id="@+id/back_white_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/label_title"
+        app:layout_constraintBottom_toBottomOf="@id/below_button_spacer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/shape_rounded_corners_10dp"
+        android:backgroundTint="@android:color/white"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        />
+
+    <TextView
+        android:id="@+id/label_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="イベント"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@id/label_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:paddingTop="26dp"
+        android:paddingBottom="14dp"
+        android:drawablePadding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/label_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="2021-08-27"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@id/flow_form"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_title"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:drawablePadding="10dp"
+        android:visibility="gone"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_date_start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="開始日*"
+        style="@style/InbloTextInputLayout"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_date_start"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textIsSelectable="true"
+            android:focusable="false"
+            android:clickable="false"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_date_end"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="終了日"
+        style="@style/InbloTextInputLayout"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_date_end"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textIsSelectable="true"
+            android:focusable="false"
+            android:clickable="false"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/ib_clear_date_end"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintRight_toRightOf="@id/til_date_end"
+        app:layout_constraintTop_toTopOf="@id/til_date_end"
+        app:layout_constraintBottom_toBottomOf="@id/til_date_end"
+        android:layout_marginRight="14dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:elevation="10dp"
+        android:visibility="gone"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_close_dialog"
+
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+
+        app:layout_constraintTop_toTopOf="@id/back_white_bg"
+        app:layout_constraintRight_toRightOf="@id/back_white_bg"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_close"
+        android:background="?selectableItemBackgroundBorderless"
+
+        />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_form"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/label_date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:constraint_referenced_ids="til_event_title,til_event_type,til_date_start,til_date_end,ll_time,til_horse_name,til_notes,btn_record_condition,below_button_spacer"
+        android:layout_marginLeft="46dp"
+        android:layout_marginRight="46dp"
+        app:flow_verticalGap="12dp"
+        />
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_event_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_event_title"
+        style="@style/InbloTextInputLayout"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_event_title"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:textColorHighlight="@color/colorPrimary"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_event_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_event_type"
+        style="@style/InbloTextInputLayoutAutocomplete"
+        >
+
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/ac_event_type"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:textColorHighlight="@color/colorPrimary"
+            android:focusable="false"
+            android:clickable="false"
+            android:tag=""
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="開始時間"
+            style="@style/InbloTextInputLayout"
+            android:layout_marginRight="12dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_start"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                android:focusable="false"
+                android:clickable="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="終了時間"
+            style="@style/InbloTextInputLayout"
+            android:layout_weight="1"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_end"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                android:focusable="false"
+                android:clickable="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_horse_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="管理馬名"
+        style="@style/InbloTextInputLayoutAutocomplete"
+        >
+
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/ac_horse_name"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:textColorHighlight="@color/colorPrimary"
+            android:focusable="false"
+            android:clickable="false"
+            android:tag=""
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_notes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="メモを書く..."
+        style="@style/InbloTextInputLayout"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_notes"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:inputType="textMultiLine"
+            android:imeOptions="actionNext"
+            android:textColorHighlight="@color/colorPrimary"
+            android:gravity="left|top"
+            android:lines="10"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/btn_record_condition"
+        app:layout_constraintLeft_toLeftOf="@id/btn_record_condition"
+        app:layout_constraintRight_toRightOf="@id/btn_record_condition"
+        app:layout_constraintBottom_toBottomOf="@id/btn_record_condition"
+        style="@style/InbloButtonMainShadow"
+        />
+    <Button
+        android:id="@+id/btn_record_condition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="＋ 追加"
+        style="@style/InbloButtonMain"
+        />
+
+    <View
+        android:id="@+id/below_button_spacer"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

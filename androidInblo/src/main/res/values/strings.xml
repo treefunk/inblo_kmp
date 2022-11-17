@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="server_error">通信に問題があります。後ほどアクセスしてください。</string>
+
+    <string name="horse_created">管理馬の登録が完了しました！</string>
+    <string name="horse_updated">管理馬の修正が完了しました！</string>
+
+    <string name="condition_created">状態を記録しました。</string>
+    <string name="condition_updated">状態を修正しました。</string>
+    <string name="condition_removed">状態を削除しました。</string>
+
+    <string name="training_created">調教を記録しました。</string>
+    <string name="training_updated">調教を修正しました。</string>
+    <string name="training_removed">調教を削除しました。</string>
+
+    <string name="treatment_created">治療を記録しました。</string>
+    <string name="treatment_updated">治療を修正しました。</string>
+    <string name="treatment_removed">治療を削除しました。</string>
+
+    <string name="no_data_horse_weight">馬体重の記録がありません。</string>
+    <string name="no_data_horse_temperature">体温の記録がありません。</string>
+
+    <string name="input_all_required">すべての項目を入力してください。</string>
+
+    <string name="hint_event_title">タイトル</string>
+    <string name="hint_event_type">イベントType <span color="red">*</span></string>
+    <string name="view_files"><u>ファイル</u></string>
+</resources>

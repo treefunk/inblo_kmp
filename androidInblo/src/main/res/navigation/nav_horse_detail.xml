@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_horse_detail"
+    app:startDestination="@id/horseConditionTabFragment">
+
+    <fragment
+        android:id="@+id/horseConditionTabFragment"
+        android:name="com.colinjp.inblo.android.presentation.ui.horse_detail.tabs.HorseDailyTabFragment"
+        android:label="HorseConditionTabFragment"
+        tools:layout="@layout/fragment_tab_horse_daily"
+        />
+    <fragment
+        android:id="@+id/horseTrainingTabFragment"
+        android:name="com.colinjp.inblo.android.presentation.ui.horse_detail.tabs.HorseTrainingTabFragment"
+        android:label="HorseTrainingTabFragment"
+        tools:layout="@layout/fragment_tab_horse_training"
+        />
+    <fragment
+        android:id="@+id/horseTreatmentTabFragment"
+        android:name="com.colinjp.inblo.android.presentation.ui.horse_detail.tabs.HorseTreatmentTabFragment"
+        android:label="HorseTreatmentTabFragment"
+        tools:layout="@layout/fragment_tab_horse_treatment"
+        />
+    <fragment
+        android:id="@+id/horseScheduleTabFragment"
+        android:name="com.colinjp.inblo.android.presentation.ui.horse_detail.tabs.HorseScheduleTabFragment"
+        android:label="HorseScheduleTabFragment"
+        tools:layout="@layout/fragment_tab_horse_schedule"
+        />
+    <action
+        android:id="@+id/action_global_horseConditionTabFragment"
+        app:destination="@id/horseConditionTabFragment"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_horseTrainingTabFragment"
+        app:destination="@id/horseTrainingTabFragment"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_horseTreatmentTabFragment"
+        app:destination="@id/horseTreatmentTabFragment"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_horseScheduleTabFragment"
+        app:destination="@id/horseScheduleTabFragment"
+        app:launchSingleTop="true" />
+    <fragment
+        android:id="@+id/calendarFragment2"
+        android:name="com.colinjp.inblo.android.presentation.ui.calendar.CalendarFragment"
+        android:label="CalendarFragment">
+        <argument
+            android:name="isHorseDetail"
+            app:argType="boolean"
+            android:defaultValue="false"
+            />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_calendarFragment2"
+        app:destination="@id/calendarFragment2">
+
+    </action>
+
+
+</navigation>

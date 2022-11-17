@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "808E95A2-DE7C-46B3-BDA7-3C6EA9E94346"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54E196DE-F313-4144-9809-B57785728C3A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosInblo/View/InbloCalendarRepresentable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "Coordinator"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "54E196DE-F313-4144-9809-B57785728C3A - 536ebb6c8113f021"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iosInblo.InbloCalendarRepresentable.Coordinator.__allocating_init() -&gt; iosInblo.InbloCalendarRepresentable.Coordinator"
+                  moduleName = "iosInblo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jhondeediaz/AndroidStudioProjects/Inblo/iosInblo/iosInblo/View/InbloCalendarRepresentable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "7">
+               </Location>
+               <Location
+                  uuid = "54E196DE-F313-4144-9809-B57785728C3A - b56842febde18c0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iosInblo.InbloCalendarRepresentable.Coordinator.init() -&gt; iosInblo.InbloCalendarRepresentable.Coordinator"
+                  moduleName = "iosInblo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jhondeediaz/AndroidStudioProjects/Inblo/iosInblo/iosInblo/View/InbloCalendarRepresentable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  uuid = "54E196DE-F313-4144-9809-B57785728C3A - 2d9f7a0ec9b6076e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iosInblo.InbloCalendarRepresentable.Coordinator.__deallocating_deinit"
+                  moduleName = "iosInblo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jhondeediaz/AndroidStudioProjects/Inblo/iosInblo/iosInblo/View/InbloCalendarRepresentable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F9E5547-838E-448A-8E67-4D4F2CCEC6A5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosInblo/App/calendar/ViewEventSheetView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

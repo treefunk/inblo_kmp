@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:background="@color/colorPrimaryDark">
+
+        <View
+            android:id="@+id/back_white_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/label_title"
+            app:layout_constraintBottom_toBottomOf="@id/below_button_spacer"
+            app:layout_constraintLeft_toLeftOf="@id/label_title"
+            app:layout_constraintRight_toRightOf="@id/label_title"
+            android:background="@drawable/shape_rounded_corners_10dp"
+            android:backgroundTint="@android:color/white"
+            />
+
+        <TextView
+            android:id="@+id/label_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="管理馬の詳細"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@id/flow_form"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:paddingTop="26dp"
+            android:paddingBottom="14dp"
+            />
+
+        <ImageButton
+            android:id="@+id/ib_close_dialog"
+
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            app:layout_constraintTop_toTopOf="@id/back_white_bg"
+            app:layout_constraintRight_toRightOf="@id/back_white_bg"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_close"
+            android:background="?selectableItemBackgroundBorderless"
+            />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow_form"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/label_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/label_title"
+            app:layout_constraintRight_toRightOf="@id/label_title"
+            app:constraint_referenced_ids="til_horse_name,til_stable_name,til_person_in_charge,til_owner_name,til_farm_name,til_training_farm_name,til_birth_date,til_sex,til_color,til_class,til_father,til_mother,til_mofa,til_total_stake,til_notes,btn_add_horse,below_button_spacer"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:flow_verticalGap="12dp"
+            />
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_horse_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="馬名"
+            style="@style/InbloTextInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_horse_name"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_stable_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="厩舎名"
+            style="@style/InbloTextInputLayoutAutocomplete"
+            android:visibility="gone"
+            >
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/ac_stable_name"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                android:focusable="false"
+                android:clickable="false"
+                android:tag="0"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_person_in_charge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="担当者"
+            style="@style/InbloTextInputLayoutAutocomplete"
+            >
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/ac_person_in_charge"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:tag="0"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_owner_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="馬主名"
+            style="@style/InbloTextInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_owner_name"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_farm_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="生産牧場名"
+            style="@style/InbloTextInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_farm_name"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_training_farm_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="育成場名"
+            style="@style/InbloTextInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_training_farm_name"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_birth_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="生年月日"
+            style="@style/InbloTextInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_birth_date"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textIsSelectable="true"
+                android:focusable="false"
+                android:clickable="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_sex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="性"
+            style="@style/InbloTextInputLayoutAutocomplete"
+            >
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/et_sex"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:focusable="false"
+                android:clickable="false"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="毛色"
+            style="@style/InbloTextInputLayoutAutocomplete"
+            >
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/et_color"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:focusable="false"
+                android:clickable="false"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_class"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="クラス"
+            style="@style/InbloTextInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_class"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_father"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="父"
+            style="@style/InbloTextInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_father"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_mother"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="母"
+            style="@style/InbloTextInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_mother"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_mofa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="母父"
+            style="@style/InbloTextInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_mofa"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_total_stake"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="総賞金"
+            style="@style/InbloTextInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_total_stake"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_notes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="メモを書く..."
+            style="@style/InbloTextInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_notes"
+                style="@style/InbloTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:inputType="textMultiLine"
+                android:imeOptions="actionNext"
+                android:textColorHighlight="@color/colorPrimary"
+                android:gravity="left|top"
+                android:lines="10"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <View
+            app:layout_constraintTop_toBottomOf="@id/btn_add_horse"
+            app:layout_constraintLeft_toLeftOf="@id/btn_add_horse"
+            app:layout_constraintRight_toRightOf="@id/btn_add_horse"
+            app:layout_constraintBottom_toBottomOf="@id/btn_add_horse"
+            style="@style/InbloButtonMainShadow"
+            />
+        <Button
+            android:id="@+id/btn_add_horse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="＋ 追加"
+            style="@style/InbloButtonMain"
+            />
+
+        <View
+            android:id="@+id/below_button_spacer"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

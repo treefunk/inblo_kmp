@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:minHeight="78dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:orientation="horizontal"
+    android:layout_marginBottom="0.3dp"
+    android:elevation="24dp"
+    android:background="@drawable/ripple_horse_list"
+    android:foreground="@drawable/state_horse_list"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mtrl_list_item_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        tools:src="@tools:sample/avatars"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="2"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_message_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/mtrl_list_item_icon"
+            android:maxLines="1"
+            tools:text="2021年5月29日 | 担当者 山本さんから"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:id="@+id/tv_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_message_description"
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@id/mtrl_list_item_icon"
+                android:maxLines="2"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_bold"
+                android:text="グランモール"
+                />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_message_description"
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@id/mtrl_list_item_icon"
+                android:paddingEnd="16dp"
+                android:maxLines="2"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/colorCaption"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_bold"
+                android:text="・8:43"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_dots"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:layout_marginRight="16dp"-->
+<!--        android:layout_marginLeft="8sp"-->
+<!--        />-->
+
+
+</LinearLayout>

@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorDarkBackground">
+
+
+
+    <View
+        android:id="@+id/dark_blue_box"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimaryDark"
+        />
+
+    <ImageButton
+        android:id="@+id/iv_back"
+        android:layout_width="25dp"
+        android:layout_height="22dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dark_blue_box"
+        app:layout_constraintBottom_toBottomOf="@id/dark_blue_box"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="16dp"
+        android:src="?attr/homeAsUpIndicator"
+        app:tint="@android:color/white"
+        android:background="?android:selectableItemBackground"
+        />
+
+    <TextView
+        android:id="@+id/label_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/dark_blue_box"
+        app:layout_constraintTop_toTopOf="@id/dark_blue_box"
+        app:layout_constraintBottom_toBottomOf="@id/dark_blue_box"
+        app:layout_constraintRight_toLeftOf="@id/iv_horse_head"
+        android:text="詳細情報"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        />
+
+    <ImageView
+        android:id="@+id/iv_horse_head"
+        android:layout_width="25dp"
+        android:layout_height="22dp"
+        app:layout_constraintLeft_toRightOf="@id/label_title"
+        app:layout_constraintTop_toTopOf="@id/label_title"
+        app:layout_constraintBottom_toBottomOf="@id/label_title"
+        app:layout_constraintRight_toRightOf="@id/dark_blue_box"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/ic_horse_standing"
+        />
+
+
+
+<!--    <View-->
+<!--        android:background="@drawable/shape_rounded_corners_16dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_width="0dp"-->
+
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/dark_blue_box"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginLeft="16dp"-->
+<!--        android:layout_marginRight="16dp"-->
+<!--        android:backgroundTint="@android:color/white"-->
+<!--        android:elevation="24dp"-->
+<!--        />-->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dark_blue_box"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@android:color/white"
+        app:cardCornerRadius="8dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+
+            <ImageView
+                android:id="@+id/iv_horse_brown_head"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:src="@drawable/ic_horse_colored"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_horse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constrainedWidth="true"
+
+                android:fontFamily="@font/hiragino_kaku_gothic_std"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_horse_age"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintHorizontal_weight="2"
+                android:gravity="center"
+
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="マイネルグアンチェ"
+                android:textSize="19sp"
+                />
+
+<!--            app:layout_constraintLeft_toLeftOf="@id/iv_horse_brown_head"-->
+<!--            app:layout_constraintRight_toRightOf="@id/iv_horse_brown_head"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/iv_horse_brown_head"-->
+<!--            android:translationY="-10dp"-->
+
+
+            <TextView
+                android:id="@+id/tv_horse_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintLeft_toRightOf="@id/tv_horse"
+                app:layout_constraintTop_toTopOf="@id/tv_horse"
+                app:layout_constraintBottom_toBottomOf="@id/tv_horse"
+                app:layout_constraintRight_toLeftOf="@id/ib_edit"
+                app:layout_constraintVertical_bias="0"
+
+                android:layout_marginRight="2dp"
+
+
+                android:fontFamily="@font/hiragino_kaku_gothic_std"
+                android:background="@drawable/shape_rounded_corners_3dp"
+                android:backgroundTint="#9B4F1D"
+                android:textSize="11sp"
+                android:text="牡5"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier_below_horse_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tv_horse_age,tv_horse"
+                />
+
+            <TextView
+                android:id="@+id/tv_race_history"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintLeft_toLeftOf="@id/tv_horse"
+                app:layout_constraintTop_toBottomOf="@id/tv_horse"
+
+                android:fontFamily="@font/hiragino_kaku_gothic_std"
+                android:background="@drawable/shape_rounded_corners_10dp"
+                android:backgroundTint="#949DAF"
+                android:textSize="12sp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="出走履歴 "
+                android:textColor="@android:color/white"
+                android:drawableRight="@drawable/ic_edit_pencil"
+                android:drawableTint="@android:color/white"
+                android:visibility="gone"
+                />
+            <View
+                android:id="@+id/spacer_below_race_history"
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_race_history"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/dark_blue_box_right"
+                />
+
+
+            <ImageButton
+                android:id="@+id/ib_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_edit_pencil"
+                app:layout_constraintLeft_toRightOf="@id/tv_horse_age"
+                app:layout_constraintTop_toTopOf="@id/tv_horse"
+                app:layout_constraintBottom_toBottomOf="@id/tv_horse"
+                app:layout_constraintRight_toLeftOf="@id/btn_view_horse_profile"
+                app:flow_horizontalBias="0"
+                android:translationY="-5dp"
+                android:layout_marginRight="8dp"
+                android:padding="0dp"
+
+                />
+
+            <Button
+                android:id="@+id/btn_view_horse_profile"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/hiragino_kaku_gothic_std"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="詳細を見る"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="9sp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+
+
+                app:layout_constraintLeft_toRightOf="@id/ib_edit"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginTop="8dp"
+
+
+                app:shapeAppearance="@style/InbloOutlinedShapeAppearance"
+                app:strokeColor="@color/colorPrimaryDark"
+                tools:layout_editor_absoluteY="-1dp" />
+
+            <View
+                android:id="@+id/dark_blue_box_right"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_date_schedule"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/spacer_below_race_history"
+                android:paddingEnd="10dp"
+                android:background="@drawable/shape_rounded_blue_right"
+                android:visibility="gone"
+                />
+            
+            
+            <ImageView
+                android:id="@+id/iv_flag_green"
+                android:layout_width="11dp"
+                android:layout_height="15dp"
+
+                android:src="@drawable/ic_flag"
+                app:layout_constraintLeft_toLeftOf="@id/dark_blue_box_right"
+                app:layout_constraintTop_toTopOf="@id/ib_edit"
+                app:layout_constraintRight_toLeftOf="@id/label_schedule"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintHorizontal_bias="1"
+                android:layout_marginRight="6dp"
+                app:tint="#41A65E"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/label_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toTopOf="@id/ib_edit"
+                app:layout_constraintLeft_toRightOf="@id/iv_flag_green"
+                app:layout_constraintRight_toRightOf="@id/dark_blue_box_right"
+                app:layout_constraintBottom_toTopOf="@id/tv_date_schedule"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginBottom="8dp"
+
+                android:layout_marginRight="10dp"
+                app:layout_constraintHorizontal_bias="1"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="#41A65E"
+                android:text="次走予定"
+                android:textSize="12sp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_date_schedule"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_max="110dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/label_schedule"
+                app:layout_constraintRight_toRightOf="@id/dark_blue_box_right"
+                app:layout_constraintBottom_toBottomOf="@id/tv_horse_age"
+                app:layout_constraintVertical_bias="1"
+                android:text="2021年5月6日"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:visibility="gone"
+                />
+
+            <View
+                android:id="@+id/line_above_units"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/flow_unit_label_and_value"
+                android:background="#BFC5D0"
+                />
+
+            <TextView
+                android:id="@+id/label_class"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                style="@style/InbloUnitLabel"
+                android:text="クラス"
+                />
+
+            <TextView
+                android:id="@+id/tv_class"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                style="@style/InbloUnitValue"
+                android:text="C3"
+                />
+
+            <TextView
+                android:id="@+id/label_father"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                style="@style/InbloUnitLabel"
+                android:text="父"
+                />
+
+            <TextView
+                android:id="@+id/tv_father"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                style="@style/InbloUnitValue"
+                android:text="SS"
+                />
+
+            <TextView
+                android:id="@+id/label_mother"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                style="@style/InbloUnitLabel"
+                android:text="母"
+                />
+
+            <TextView
+                android:id="@+id/tv_mother"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                style="@style/InbloUnitValue"
+                android:text="YY"
+                />
+
+            <TextView
+                android:id="@+id/label_mofa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                style="@style/InbloUnitLabel"
+                android:text="母父"
+                />
+
+            <TextView
+                android:id="@+id/tv_mofa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                style="@style/InbloUnitValue"
+                android:text="SSS"
+                />
+
+            <androidx.constraintlayout.widget.Group
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="flow_unit_label_and_value,line_below_units,iv_profile_pic,tv_status,shape_arrow_status_bubble,tv_profile_name,line_above_units,spacer_below_profile"
+                android:visibility="gone"
+                />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow_unit_label_and_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:constraint_referenced_ids="label_class,tv_class,label_father,tv_father,label_mother,tv_mother,label_mofa,tv_mofa"
+
+                app:flow_horizontalStyle="spread"
+                app:flow_maxElementsWrap="2"
+                app:flow_wrapMode="chain"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dark_blue_box_right"
+
+                />
+
+            <View
+                android:id="@+id/line_below_units"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/flow_unit_label_and_value"
+                android:background="#BFC5D0"
+                />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toRightOf="@id/label_class"
+                app:layout_constraintRight_toLeftOf="@id/label_father"
+                app:layout_constraintTop_toBottomOf="@id/line_above_units"
+                app:layout_constraintBottom_toTopOf="@id/line_below_units"
+                android:background="#BFC5D0"
+                />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toRightOf="@id/label_father"
+                app:layout_constraintRight_toLeftOf="@id/label_mother"
+                app:layout_constraintTop_toBottomOf="@id/line_above_units"
+                app:layout_constraintBottom_toTopOf="@id/line_below_units"
+                android:background="#BFC5D0"
+                />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toRightOf="@id/label_mother"
+                app:layout_constraintRight_toLeftOf="@id/label_mofa"
+                app:layout_constraintTop_toBottomOf="@id/line_above_units"
+                app:layout_constraintBottom_toTopOf="@id/line_below_units"
+                android:background="#BFC5D0"
+                />
+
+
+            <ImageView
+                android:id="@+id/iv_profile_pic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@id/line_below_units"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/ic_ic_person_in_charge"
+                />
+
+            <TextView
+                android:id="@+id/tv_profile_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/iv_profile_pic"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_status"
+                style="@style/InbloUnitValue"
+                android:text="田中"
+                android:lineHeight="22dp"
+                android:textColor="#949DAF"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="7dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintHeight_min="60dp"
+
+                app:layout_constraintTop_toTopOf="@id/iv_profile_pic"
+                app:layout_constraintLeft_toRightOf="@id/iv_profile_pic"
+                app:layout_constraintRight_toRightOf="parent"
+
+
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/shape_rounded_corners_7dp"
+                android:fontFamily="@font/hiragino_kaku_gothic_std"
+                android:layout_marginLeft="14dp"
+
+                android:text="今日は馬房内で発汗目立つ。"
+                android:padding="14dp"
+                />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier_below_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tv_profile_name,tv_status"
+                />
+
+            <View
+                android:id="@+id/spacer_below_profile"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier_below_profile_name"
+
+                />
+
+            <ImageView
+                android:id="@+id/shape_arrow_status_bubble"
+                android:layout_width="33dp"
+                android:layout_height="23dp"
+                android:background="@drawable/ic_left_arrow_bubble"
+                app:layout_constraintLeft_toLeftOf="@id/tv_status"
+                app:layout_constraintRight_toLeftOf="@id/tv_status"
+                app:layout_constraintTop_toTopOf="@id/tv_status"
+                app:layout_constraintBottom_toBottomOf="@id/tv_status"
+                android:scaleType="centerInside"
+                android:translationX="2.5dp"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        app:layout_constraintTop_toBottomOf="@id/card"
+        android:layout_marginTop="24dp"
+        app:tabMinWidth="120dp"
+        app:tabTextColor="@color/color_states_bottom_nav"
+        app:tabIconTint="@color/color_states_bottom_nav"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日報"
+            android:icon="@drawable/ic_condition"
+            />
+
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="日報"-->
+<!--            android:icon="@drawable/ic_training"-->
+<!--            />-->
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="健康管理"
+            android:icon="@drawable/ic_treatment"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="カレンダー"
+            android:icon="@drawable/ic_calendar"
+            />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment_horse_detail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:navGraph="@navigation/nav_horse_detail"
+        />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/iv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:trackColor="@android:color/transparent"
+        app:indicatorColor="@color/colorPrimaryDark"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:indeterminate="true"
+        android:elevation="999dp"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

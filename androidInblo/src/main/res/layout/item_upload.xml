@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginBottom="12dp"
+    >
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="iv_uploaded_image,tv_file_name,ib_remove"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:flow_horizontalBias="0"
+        app:flow_horizontalStyle="packed"
+        />
+    <ImageView
+        android:id="@+id/iv_uploaded_image"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+
+
+        app:layout_constraintHorizontal_bias="0"
+
+        android:layout_marginRight="2dp"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_baseline_attach_file_24"
+        app:tint="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:id="@+id/tv_file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:maxWidth="200dp"
+        android:gravity="center"
+        tools:text="sample.jpegfdsfsdfsdfsdffdsfsdfsdfsdfdsfsdfsdfdsfds"
+        android:paddingRight="30dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/colorPrimaryDark"
+
+        />
+
+    <ImageButton
+        android:id="@+id/ib_remove"
+
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:srcCompat="@drawable/ic_baseline_close_24"
+        android:background="@drawable/shape_rounded_red_fill"
+        android:tint="@android:color/white"
+        android:layout_gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:scaleType="centerInside"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

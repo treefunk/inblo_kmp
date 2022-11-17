@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Register"
+        style="@style/InbloLoginHeader"
+        android:gravity="center"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/label_role"
+        style="@style/InbloLoginCaption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="36dp"
+        android:text="役割は？"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintLeft_toLeftOf="@id/text_view_title"
+        app:layout_constraintRight_toRightOf="@id/text_view_title"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title" />
+
+    <RadioGroup
+        android:id="@+id/rg_role"
+        android:checkedButton="@+id/radio_button_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        app:layout_constraintLeft_toLeftOf="@id/text_view_title"
+        app:layout_constraintRight_toRightOf="@id/text_view_title"
+        app:layout_constraintTop_toBottomOf="@id/label_role"
+        android:translationX="-4.5dp"
+        >
+        <RadioButton
+            android:id="@+id/role_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/InbloRadioButton"
+            android:text="調教師"
+            />
+        <RadioButton
+            android:id="@+id/role_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/InbloRadioButton"
+
+            android:text="担当者"/>
+    </RadioGroup>
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/til_racetrack_name"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        app:layout_constraintLeft_toLeftOf="@id/text_view_title"-->
+<!--        app:layout_constraintRight_toRightOf="@id/text_view_title"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/rg_role"-->
+
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:hint="競馬場名"-->
+<!--        style="@style/InbloTextInputLayout"-->
+<!--        >-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/et_racetrack_name"-->
+<!--            style="@style/InbloTextInputEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:inputType="text"-->
+<!--            android:imeOptions="actionNext"-->
+<!--            android:textColorHighlight="@color/colorPrimary"-->
+<!--            />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="@id/text_view_title"
+        app:layout_constraintRight_toRightOf="@id/text_view_title"
+        app:layout_constraintTop_toBottomOf="@id/rg_role"
+
+        android:layout_marginTop="18dp"
+        android:hint="ユーザー名"
+        style="@style/InbloTextInputLayout"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_username"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColorHighlight="@color/colorPrimary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="@id/text_view_title"
+        app:layout_constraintRight_toRightOf="@id/text_view_title"
+        app:layout_constraintTop_toBottomOf="@id/til_username"
+
+        android:layout_marginTop="18dp"
+        android:hint="パスワードを設定"
+        style="@style/InbloTextInputLayout"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:textColorHighlight="@color/colorPrimary"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_first_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="@id/text_view_title"
+        app:layout_constraintRight_toLeftOf="@id/til_last_name"
+        app:layout_constraintTop_toBottomOf="@id/til_password"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="18dp"
+        android:hint="姓"
+        style="@style/InbloTextInputLayout"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_first_name"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:textColorHighlight="@color/colorPrimary"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_last_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toRightOf="@id/til_first_name"
+        app:layout_constraintRight_toRightOf="@id/text_view_title"
+        app:layout_constraintTop_toBottomOf="@id/til_password"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+
+
+        android:hint="名"
+        style="@style/InbloTextInputLayout"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_last_name"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:textColorHighlight="@color/colorPrimary"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="@id/text_view_title"
+        app:layout_constraintRight_toRightOf="@id/text_view_title"
+        app:layout_constraintTop_toBottomOf="@id/til_first_name"
+
+        android:layout_marginTop="18dp"
+        android:hint="Eメール"
+        style="@style/InbloTextInputLayout"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:textColorHighlight="@color/colorPrimary"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_stable_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="厩舎名"
+        style="@style/InbloTextInputLayoutAutocomplete"
+        app:layout_constraintTop_toBottomOf="@id/til_email"
+        app:layout_constraintLeft_toLeftOf="@id/text_view_title"
+        app:layout_constraintRight_toRightOf="@id/text_view_title"
+        android:layout_marginTop="18dp"
+        >
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/ac_stable_name"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:textColorHighlight="@color/colorPrimary"
+            android:focusable="false"
+            android:clickable="false"
+            android:tag="0"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_stable_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/til_email"
+        app:layout_constraintLeft_toLeftOf="@id/text_view_title"
+        app:layout_constraintRight_toRightOf="@id/text_view_title"
+
+        android:layout_marginTop="18dp"
+        android:hint="厩舎コード"
+        style="@style/InbloTextInputLayout"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_stable_code"
+            style="@style/InbloTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:textColorHighlight="@color/colorPrimary"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="登録"
+        app:layout_constraintLeft_toLeftOf="@id/til_password"
+        app:layout_constraintRight_toRightOf="@id/til_password"
+        app:layout_constraintTop_toBottomOf="@id/til_stable_code"
+        android:layout_marginTop="24dp"
+        style="@style/InbloButtonMain"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_sign_up_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/btn_sign_up"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_sign_in_link"
+        app:layout_constraintHorizontal_chainStyle="packed"
+
+        android:layout_marginTop="16dp"
+
+        android:text="既にアカウントをお持ちの方？"
+
+        style="@style/InbloLoginCaption"
+        />
+
+    <TextView
+        android:id="@+id/tv_sign_in_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toRightOf="@id/tv_sign_up_description"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign_up"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="6dp"
+
+        android:text="ログイン"
+        android:textColor="@color/colorBlackText"
+
+        style="@style/InbloLoginCaption"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sign_up_description"
+        android:background="@android:color/transparent"
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

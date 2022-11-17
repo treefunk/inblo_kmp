@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:minHeight="60dp"
+
+    android:orientation="horizontal"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:elevation="12dp"
+    >
+
+    <View
+        android:id="@+id/rect_left"
+        android:layout_width="6dp"
+        android:layout_height="match_parent"
+        android:background="#EA7266"
+        />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="65dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="#FFDFDF"
+        android:text="12:00"
+        android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="2"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/mtrl_list_item_icon"
+            android:maxLines="1"
+            tools:text="最終追切"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/shape_round"
+                android:backgroundTint="#22D143"
+                android:layout_gravity="center"
+                android:layout_marginRight="4dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_message_description"
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@id/mtrl_list_item_icon"
+                android:maxLines="2"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_bold"
+                android:text="グランモール"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dots"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="8sp"
+        android:background="@drawable/shape_rounded_corners_17dp"
+        android:text="見る"
+        android:backgroundTint="#E55863"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="12sp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="@android:color/white"
+        />
+
+
+</LinearLayout>

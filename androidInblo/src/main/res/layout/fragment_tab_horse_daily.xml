@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDarkBackground"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+
+    >
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_record_today"
+        style="@style/InbloTabButton"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:text="状態を記録する"
+        app:icon="@drawable/ic_add_blue"
+
+        app:iconGravity="textStart"
+        app:iconTint="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.colinjp.inblo.android.domain.util.NonScrollingScrollView
+        android:id="@+id/hor_scroll_labels"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbarSize="0dp"
+        android:scrollbars="none"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_record_today">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow_columns"
+                android:layout_width="1000dp"
+                android:layout_height="50dp"
+
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_rounded_top_corners_7dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="spacer_label,label_date,label_temperature,label_weight,label_condition_group,label_rider_name,label_training_type,label_training_amount,label_5F,label_4F,label_3F,label_note,label_attachments"
+                app:flow_firstHorizontalBias="0"
+                app:flow_horizontalStyle="spread_inside"
+                app:flow_wrapMode="aligned"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+
+            </androidx.constraintlayout.helper.widget.Flow>
+
+            <View
+                android:id="@+id/spacer_label"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/label_date"
+                style="@style/InbloButtonTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="日付"
+                app:icon="@drawable/ic_baseline_arrow_drop_down_15"
+                app:iconTint="@android:color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/label_temperature"
+                style="@style/InbloButtonTextView"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:text="体温"
+                app:icon="@drawable/ic_baseline_arrow_drop_down_15" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/label_weight"
+                style="@style/InbloButtonTextView"
+                android:layout_width="0dp"
+
+
+                android:layout_height="wrap_content"
+                android:text="馬体重"
+                app:icon="@drawable/ic_baseline_arrow_drop_down_15" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/label_condition_group"
+                style="@style/InbloButtonTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="馬場状態" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/label_rider_name"
+                style="@style/InbloButtonTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="乗り手" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/label_training_type"
+                style="@style/InbloButtonTextView"
+                android:layout_width="0dp"
+
+
+                android:layout_height="wrap_content"
+                android:text="調教内容" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/label_training_amount"
+                    style="@style/InbloButtonTextView"
+                    android:layout_width="0dp"
+
+
+                    android:layout_height="wrap_content"
+                    android:text="調教量" />
+
+                <TextView
+                    android:id="@+id/label_5F"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    style="@style/InbloTableColumnLabel"
+                    android:text="5F"
+                    />
+
+                <TextView
+                    android:id="@+id/label_4F"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    style="@style/InbloTableColumnLabel"
+                    android:text="4F"
+                    />
+
+                <TextView
+                    android:id="@+id/label_3F"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    style="@style/InbloTableColumnLabel"
+                    android:text="3F"
+                    />
+
+            <TextView
+                android:id="@+id/label_note"
+                style="@style/InbloTableColumnLabel"
+                android:layout_width="0dp"
+                app:layout_constraintWidth="150dp"
+
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="メモ" />
+
+
+                <TextView
+                    android:id="@+id/label_attachments"
+                    style="@style/InbloTableColumnLabel"
+                    android:layout_width="0dp"
+
+
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="添付ファイル" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.colinjp.inblo.android.domain.util.NonScrollingScrollView>
+
+
+    <HorizontalScrollView
+        android:id="@+id/hor_scroll_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/btn_temperature_and_weight_graph"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hor_scroll_labels"
+        app:layout_constraintVertical_bias="0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_horse_conditions"
+                android:layout_width="1000dp"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintVertical_weight="1"
+                tools:itemCount="23"
+
+                tools:listitem="@layout/item_horse_daily" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/btn_temperature_and_weight_graph"
+        style="@style/InbloTabButton"
+        android:layout_width="wrap_content"
+
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+
+        android:drawableLeft="@drawable/ic_stats"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="グラフを見る"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toLeftOf="@id/hor_scroll_recycler"
+        app:layout_constraintRight_toRightOf="@id/hor_scroll_recycler"
+        app:layout_constraintTop_toBottomOf="@id/hor_scroll_recycler" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

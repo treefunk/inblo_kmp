@@ -1,0 +1,97 @@
+PODS:
+  - Alamofire (5.5.0)
+  - FSCalendar (2.8.2)
+  - JTAppleCalendar (8.0.3)
+  - KeyboardObserving (0.3.0)
+  - MaterialComponents/AnimationTiming (124.2.0)
+  - MaterialComponents/Availability (124.2.0)
+  - MaterialComponents/private/Color (124.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (124.2.0)
+  - "MaterialComponents/private/TextControlsPrivate+BaseStyle (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+Shared (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/TextControls+Enums"
+  - "MaterialComponents/private/TextControlsPrivate+TextFields (124.2.0)":
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - MaterialComponents/Ripple (124.2.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - "MaterialComponents/Tabs+TabBarView (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MDFInternationalization
+  - "MaterialComponents/TextControls+BaseTextFields (124.2.0)":
+    - "MaterialComponents/private/TextControlsPrivate+BaseStyle"
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+    - "MaterialComponents/private/TextControlsPrivate+TextFields"
+    - MDFInternationalization
+  - "MaterialComponents/TextControls+Enums (124.2.0)"
+  - "MaterialComponents/TextControls+OutlinedTextFields (124.2.0)":
+    - MaterialComponents/Availability
+    - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle"
+    - "MaterialComponents/TextControls+BaseTextFields"
+  - MDFInternationalization (3.0.0)
+  - SDWebImage (5.12.4):
+    - SDWebImage/Core (= 5.12.4)
+  - SDWebImage/Core (5.12.4)
+  - SDWebImageSwiftUI (2.0.2):
+    - SDWebImage (~> 5.10)
+  - shared (1.0)
+  - SwiftCoroutine (2.1.11)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4)
+  - FSCalendar
+  - JTAppleCalendar
+  - KeyboardObserving
+  - "MaterialComponents/Tabs+TabBarView"
+  - "MaterialComponents/TextControls+OutlinedTextFields"
+  - SDWebImageSwiftUI
+  - shared (from `../shared`)
+  - SwiftCoroutine
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FSCalendar
+    - JTAppleCalendar
+    - KeyboardObserving
+    - MaterialComponents
+    - MDFInternationalization
+    - SDWebImage
+    - SDWebImageSwiftUI
+    - SwiftCoroutine
+
+EXTERNAL SOURCES:
+  shared:
+    :path: "../shared"
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
+  KeyboardObserving: 0e3089bfd76cd10cd49f28532450e70b16c239c3
+  MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
+  MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
+  SDWebImage: 631cf572cc93dfdfe54162e556410a61f1141928
+  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
+  shared: 7b4d6aa8aa7ada5f9dae3229e2524d316cb9f063
+  SwiftCoroutine: b584780401083a0c41323ef1af07c2effe369dce
+
+PODFILE CHECKSUM: 22a28a0841a0ef984d6dd2b3b37b81db80dec65d
+
+COCOAPODS: 1.11.2

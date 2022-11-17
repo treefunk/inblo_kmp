@@ -1,0 +1,6 @@
+framework module Pods_iosInblo {
+  umbrella header "Pods-iosInblo-umbrella.h"
+
+  export *
+  module * { export * }
+}

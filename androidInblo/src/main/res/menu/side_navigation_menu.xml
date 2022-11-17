@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/item_horse_info_site"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="地方競馬情報サイト" />
+    </group>
+    <group>
+        <item
+            android:id="@+id/item_horse_archive_list"
+            android:icon="@drawable/ic_baseline_archive_24"
+            android:title="削除済管理馬一覧" />
+    </group>
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+                <item
+                    android:id="@+id/item_logout"
+                    android:icon="@drawable/ic_baseline_logout_24"
+                    android:title="ログアウト" />
+    </group>
+</menu>
